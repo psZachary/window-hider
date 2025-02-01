@@ -14,9 +14,20 @@ This file drops a DLL onto the filesystem which is [encoded into a byte array in
 ```c++
 #include <wh.h>
 
+using namespace wh;
+
 int main() {
   // Hide the default notepad window
-  wh::hide_window("Untitled - Notepad");
+  WH_RESULT result = hide_window("Untitled - Notepad");
+
+  // Ensure the program succeeded
+  if (result != WH_RESULT::success && result != WH_RESULT::already_hidden) {
+    std::cout << "Window failed to hide with error: " << result << std::endl;
+    return 1;
+  }
+
+  std::cout << "Window hidden successfully" << std::endl;
+  
   return 0;
 }
 ```
