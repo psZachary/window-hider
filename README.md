@@ -8,7 +8,7 @@ To set the display affinity of a window using **SetWindowDisplayAffinity** our p
 This is a single header library and can be included from the [single header include file](https://github.com/psZachary/window-hider/blob/master/test-app/wh/wh.h).
 
 ### Important note
-This file drops a DLL onto the filesystem which is [encoded into a byte array inside of the header file](https://github.com/psZachary/window-hider/blob/3a22e1c4cacb71e866d78779b81083a7a2f5eece/test-app/wh/wh.h#L6), I would recommend [building the DLL](https://github.com/psZachary/window-hider/blob/master/window-hider/src/dllmain.cpp) and [converting to the byte array manually](https://notisrac.github.io/FileToCArray/) such that it is trustworthy and that it works on your system. 
+This file drops a DLL onto the filesystem which is [encoded into a byte array inside of the header file](https://github.com/psZachary/window-hider/blob/3a22e1c4cacb71e866d78779b81083a7a2f5eece/test-app/wh/wh.h#L6), I would recommend [building the DLL](https://github.com/psZachary/window-hider/tree/master/window-hider) and [converting to the byte array manually](https://notisrac.github.io/FileToCArray/) such that it is trustworthy and that it works on your system. 
 
 ### Usage
 ```c++
